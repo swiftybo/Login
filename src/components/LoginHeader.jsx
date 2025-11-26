@@ -1,4 +1,4 @@
-export default function Header() {
+export default function LoginHeader() {
   return (
     <>
       <h1 className="login__header">Welcome Back</h1>
