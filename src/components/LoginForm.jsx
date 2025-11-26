@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import classes from "./LoginForm.module.css";
 import { isNotEmpty } from "../util/validation";
 import { isEmail } from "../util/validation";
+import { useActionState } from "react";
 
-function logInAction(formData) {
+function logInAction(prevFormState, formData) {
   const username = formData.get("username");
   const password = formData.get("password");
   const remember = formData.get("remember");
-
-  console.log(username, remember);
 
   let errors = [];
 
@@ -21,7 +20,7 @@ function logInAction(formData) {
   }
 
   if (errors.length > 0) {
-    return { errors: errors, enteredDetails: username, password, remember };
+    return { errors: errors, enteredDetails: { username, remember } };
   }
 
   return { errors: null };
@@ -29,10 +28,12 @@ function logInAction(formData) {
 
 export default function LoginForm() {
   // const loginCtx = useContext(LoginContext);
+  const [formState, formAction] = useActionState(logInAction, { errors: null });
+  console.log(formState);
 
   return (
     <>
-      <form action={logInAction}>
+      <form action={formAction}>
         <div>
           <label htmlFor="username">Username or Email</label>
           <input
@@ -40,6 +41,7 @@ export default function LoginForm() {
             type="text"
             name="username"
             placeholder="Username or Email"
+            defaultValue={formState.enteredDetails?.username}
             required
           ></input>
         </div>
@@ -56,8 +58,16 @@ export default function LoginForm() {
         </div>
 
         <div>
-          <input id="remember" type="checkbox" name="remember"></input>
-          <label htmlFor="remember">Remember me</label>
+          <label htmlFor="remember">
+            Remember me
+            <input
+              id="remember"
+              type="checkbox"
+              name="remember"
+              //BUG: checkbox seems to be always checked by default (apart from first render)
+              defaultChecked={formState.enteredDetails?.remember}
+            />
+          </label>
         </div>
 
         <div>
@@ -82,7 +92,15 @@ export default function LoginForm() {
           <span className={classes.slider}></span>
         </label>
 
-        <button type="submit">Log In</button>
+        <button>Log In</button>
+
+        {formState.errors && (
+          <ul>
+            {formState.errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+        )}
       </form>
     </>
   );

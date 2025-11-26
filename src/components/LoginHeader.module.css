@@ -1,2 +1,14 @@
-.login-header {
+.login__headerSection {
+  padding: 2rem;
+}
+
+.login__header {
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.login__subheader {
+  font-size: 1.3rem;
+  text-align: center;
 }
