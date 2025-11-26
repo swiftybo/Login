@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./assets/login-background.jpg");
+  /* z-index: -20;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.with-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.login {
+  min-width: 50rem;
+  height: 50rem;
+  border: 1px solid black;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+}
