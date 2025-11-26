@@ -4,6 +4,7 @@ import AlternativeLogin from "./pages/AlternativeLogin.jsx";
 import Welcome from "./pages/Welcome.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import Root from "./pages/Root.jsx";
+import { LoginContext } from "./store/login-context.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <LoginContext>
+      <RouterProvider router={router} />
+    </LoginContext>
+  );
 }
 
 export default App;
