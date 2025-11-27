@@ -4,9 +4,11 @@ import AlternativeButton from "./AlternativeButton.jsx";
 
 export default function AlternativeLogin() {
   return (
-    <main className={classes.alternativeLoginSection}>
-      <HorizontalBreak breakWord={"or"} />
-      <AlternativeButton />
+    <main className={classes.content}>
+      <section className={classes.alternativeLogin}>
+        <HorizontalBreak breakWord={"or"} />
+        <AlternativeButton />
+      </section>
     </main>
   );
 }

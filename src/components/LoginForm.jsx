@@ -31,7 +31,7 @@ export default function LoginForm() {
   const [formState, formAction] = useActionState(logInAction, { errors: null });
 
   return (
-    <main className={classes.formSection}>
+    <main className={classes.content}>
       <form action={formAction} className={classes.loginForm}>
         <div className={classes.loginForm__field}>
           <label htmlFor="username"></label>
