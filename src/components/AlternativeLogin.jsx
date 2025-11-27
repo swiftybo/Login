@@ -4,7 +4,7 @@ import HorizontalBreak from "./HorizontalBreak.jsx";
 export default function AlternativeLogin() {
   return (
     <>
-      <HorizontalBreak />
+      <HorizontalBreak breakWord={"or"} />
     </>
   );
 }
