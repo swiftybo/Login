@@ -31,7 +31,7 @@ export default function LoginForm() {
   const [formState, formAction] = useActionState(logInAction, { errors: null });
 
   return (
-    <>
+    <main className={classes.formSection}>
       <form action={formAction} className={classes.loginForm}>
         <div className={classes.loginForm__field}>
           <label htmlFor="username"></label>
@@ -84,6 +84,6 @@ export default function LoginForm() {
 
         <button className={classes.loginForm__button}>Log In</button>
       </form>
-    </>
+    </main>
   );
 }

@@ -1,14 +1,19 @@
 .break {
+  width: 21rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  margin: 3rem 0rem;
+  margin-top: 1rem;
+  gap: 12px;
 }
 
 .breakline {
   border: none;
   height: 1px;
-  width: 30%;
-  background-color: black;
+  width: 100%;
+  background-color: rgb(174, 169, 169);
+}
+
+.breakWord {
+  color: rgb(174, 169, 169);
 }

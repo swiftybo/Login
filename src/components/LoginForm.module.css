@@ -1,17 +1,30 @@
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginForm {
+  width: 21rem;
+}
+
 .loginForm__field {
-  margin: 1rem 8rem;
+  width: 100%;
 }
 
 .loginForm__input {
   border-radius: 0.5rem;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1.5rem;
+  margin: 0.25em 0rem;
   width: 100%;
   height: 3rem;
   font-size: 1.2rem;
 }
 
 .loginForm__toolsSection {
-  margin: 1rem 8rem;
+  margin-top: 0.25rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -23,9 +36,10 @@
 }
 
 .loginForm__errorsList {
-  margin: auto;
-  width: 28rem;
-  font-size: 1.2rem;
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  width: 100%;
+  font-size: 1rem;
   color: rgb(149, 103, 18);
 }
 
@@ -34,6 +48,6 @@
   margin: 2.5rem auto 2rem;
   border-radius: 0.5rem;
   height: 3rem;
-  width: 18rem;
+  width: 100%;
   font-size: 1.3rem;
 }
