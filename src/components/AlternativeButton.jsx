@@ -1,12 +1,15 @@
 import classes from "./AlternativeButton.module.css";
-import appleLogo from "../assets/apple-logo.png";
 
-export default function AlternativeButton() {
+export default function AlternativeButton({ enterprise, logoLink }) {
   return (
     <>
       <button className={classes.button}>
-        <img src={appleLogo} alt="apple logo" className={classes.button__img} />
-        {/* Continue with Apple */}
+        <img
+          src={logoLink}
+          alt={`${enterprise} logo`}
+          className={classes.button__img}
+        />
+        Continue with {enterprise}
       </button>
     </>
   );

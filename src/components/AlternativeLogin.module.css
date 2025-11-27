@@ -8,3 +8,13 @@
 .alternativeLogin {
   width: 21rem;
 }
+
+.alternativeLogin__para {
+  margin-top: 1rem;
+  text-align: center;
+  color: rgb(129, 127, 127);
+}
+
+.alternativeLogin__link {
+  color: rgb(129, 127, 127);
+}

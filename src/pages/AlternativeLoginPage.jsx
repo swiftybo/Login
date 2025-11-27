@@ -1,4 +1,4 @@
-function AlternativeLogin() {
+function AlternativeLoginPage() {
   return (
     <>
       <h1>Alternative Log-in Page</h1>
@@ -6,4 +6,4 @@ function AlternativeLogin() {
   );
 }
 
-export default AlternativeLogin;
+export default AlternativeLoginPage;

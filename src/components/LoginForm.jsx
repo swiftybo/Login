@@ -72,7 +72,6 @@ export default function LoginForm() {
           <div className={classes.loginForm__checkbox}>
             <label htmlFor="remember">Remember me </label>
             <input
-              style={{ "-webkit-transform": "scale(1.25)" }}
               id="remember"
               type="checkbox"
               name="remember"
