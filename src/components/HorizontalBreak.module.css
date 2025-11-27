@@ -1,0 +1,14 @@
+.break {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 3rem 0rem;
+}
+
+.breakline {
+  border: none;
+  height: 1px;
+  width: 30%;
+  background-color: black;
+}

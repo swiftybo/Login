@@ -1,0 +1,23 @@
+.alternativeLogin__hr {
+  border: 0;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.alternativeLogin__hr::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+
+.alternativeLogin__hr::after {
+  color: white;
+  content: attr(content);
+  line-height: 1.5rem;
+  position: relative;
+}

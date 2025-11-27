@@ -1,5 +1,6 @@
 import LoginHeader from "../components/LoginHeader.jsx";
 import LoginForm from "../components/LoginForm.jsx";
+import AlternativeLogin from "../components/AlternativeLogin.jsx";
 
 function MainLogin() {
   return (
@@ -24,6 +25,7 @@ function MainLogin() {
 
       <LoginHeader />
       <LoginForm />
+      <AlternativeLogin />
     </div>
   );
 }
