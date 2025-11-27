@@ -11,15 +11,24 @@
 
 .loginForm__field {
   width: 100%;
+  position: relative;
+}
+
+.loginForm__icon {
+  height: 1.7rem;
+  width: 1.7rem;
+  position: absolute;
+  top: 1rem;
+  left: 0.8rem;
 }
 
 .loginForm__input {
   border-radius: 0.5rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 3.2rem 0.5rem;
   margin: 0.25em 0rem;
   width: 100%;
   height: 3rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .loginForm__toolsSection {
@@ -49,5 +58,5 @@
   border-radius: 0.5rem;
   height: 3rem;
   width: 100%;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }

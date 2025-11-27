@@ -3,6 +3,8 @@ import classes from "./LoginForm.module.css";
 import { isNotEmpty } from "../util/validation";
 import { isEmail } from "../util/validation";
 import { useActionState } from "react";
+import loginIcon from "../assets/login-icon.png";
+import passwordIcon from "../assets/password-icon.png";
 
 function logInAction(prevFormState, formData) {
   const username = formData.get("username");
@@ -35,6 +37,11 @@ export default function LoginForm() {
       <form action={formAction} className={classes.loginForm}>
         <div className={classes.loginForm__field}>
           <label htmlFor="username"></label>
+          <img
+            src={loginIcon}
+            alt="login icon"
+            className={classes.loginForm__icon}
+          />
           <input
             className={classes.loginForm__input}
             id="username"
@@ -47,6 +54,11 @@ export default function LoginForm() {
 
         <div className={classes.loginForm__field}>
           <label htmlFor="password"></label>
+          <img
+            src={passwordIcon}
+            alt="password icon"
+            className={classes.loginForm__icon}
+          />
           <input
             className={classes.loginForm__input}
             id="password"

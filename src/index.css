@@ -36,10 +36,10 @@
   background-color: whitesmoke;
   border-radius: 1rem;
   padding: 1.5rem;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
+}
+
+button {
+  cursor: pointer;
 }
 
 /* All classes below are related to the toggle */
